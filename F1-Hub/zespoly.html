@@ -1,25 +1,166 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zespoły</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zespoły F1</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a href="index.html">Start</a>
-<a href="kierowcy.html">Kierowcy</a>
-<a href="zespoly.html">Zespoły</a>
-<a href="tory.html">Tory</a>
-<a href="historia.html">Historia</a>
-<a href="kontakt.html">Kontakt</a>
-<button id="themeBtn">🌙</button>
-</nav>
-<main>
-<h1>Zespoły F1</h1>
-<p>Najważniejsze zespoły Formuły 1.</p>
-</main>
-<script src="js/main.js"></script>
+  <nav>
+    <div>
+      <a href="index.html">Start</a>
+      <a href="kierowcy.html">Kierowcy</a>
+      <a href="zespoly.html">Zespoły</a>
+      <a href="tory.html">Tory</a>
+      <a href="historia.html">Historia</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>🏢 Zespoły Formuły 1</h1>
+      <p>Poznaj zespoły walczące o mistrzostwo świata</p>
+    </section>
+
+    <section>
+      <h2>Główne Zespoły 2024</h2>
+      <div class="container-grid">
+        <!-- ZESPÓŁ 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/1.jpg" alt="Zespół 1" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z1">1️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #1 - Red</h3>
+            <p>Legendarny zespół z bogatą historią. Znanym z innowacyjnych rozwiązań technicznych i potężnego budżetu R&D.</p>
+            <span class="card-tag">Punkty zespołu: 870</span>
+          </div>
+        </div>
+
+        <!-- ZESPÓŁ 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/2.jpg" alt="Zespół 2" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z2">2️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #2 - Silver</h3>
+            <p>Najstarsza ekipa w F1 ze wspaniałą tradycją. Walczy o każdy punkt z determinacją i profesjonalizmem.</p>
+            <span class="card-tag">Punkty zespołu: 800</span>
+          </div>
+        </div>
+
+        <!-- ZESPÓŁ 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/3.jpg" alt="Zespół 3" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z3">3️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #3 - Orange</h3>
+            <p>Szybko rosnący zespół z nowoczesnym podejściem. Inwestuje w talenty i nowe technologie przyszłości.</p>
+            <span class="card-tag">Punkty zespołu: 720</span>
+          </div>
+        </div>
+
+        <!-- ZESPÓŁ 4 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/4.jpg" alt="Zespół 4" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z4">4️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #4 - Blue</h3>
+            <p>Dynamiczny zespół z ambitnymi celami. Buduje swoją pozycję dzięki strategii i solidnym wynikom.</p>
+            <span class="card-tag">Punkty zespołu: 680</span>
+          </div>
+        </div>
+
+        <!-- ZESPÓŁ 5 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/5.jpg" alt="Zespół 5" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z5">5️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #5 - Green</h3>
+            <p>Młody zespół pełen energii i nowych pomysłów. Pracuje nad polepszeniem swojej pozycji w stawce.</p>
+            <span class="card-tag">Punkty zespołu: 620</span>
+          </div>
+        </div>
+
+        <!-- ZESPÓŁ 6 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/zespoly/6.jpg" alt="Zespół 6" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-z6">6️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespół #6 - Yellow</h3>
+            <p>Zespół z solidną bazą techniczną. Konsekwentnie zdobywa punkty i wzmacnia swoją pozycję w mistrzostwach.</p>
+            <span class="card-tag">Punkty zespołu: 580</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ranking Zespołów</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pozycja</th>
+            <th>Zespół</th>
+            <th>Kierowcy</th>
+            <th>Punkty</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Zespół #1 - Red</td>
+            <td>2</td>
+            <td>870</td>
+            <td>✅ Aktywny</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Zespół #2 - Silver</td>
+            <td>2</td>
+            <td>800</td>
+            <td>✅ Aktywny</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Zespół #3 - Orange</td>
+            <td>2</td>
+            <td>720</td>
+            <td>✅ Aktywny</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Zespół #4 - Blue</td>
+            <td>2</td>
+            <td>680</td>
+            <td>✅ Aktywny</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Zespół #5 - Green</td>
+            <td>2</td>
+            <td>620</td>
+            <td>✅ Aktywny</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
