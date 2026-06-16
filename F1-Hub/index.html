@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F1 Hub</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Hub</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a href="index.html">Start</a>
-<a href="kierowcy.html">Kierowcy</a>
-<a href="zespoly.html">Zespoły</a>
-<a href="tory.html">Tory</a>
-<a href="historia.html">Historia</a>
-<a href="kontakt.html">Kontakt</a>
-<button id="themeBtn">🌙</button>
-</nav>
-<main>
-<h1>F1 Hub</h1>
-<p>Portal poświęcony Formule 1. Sprawdź kierowców, zespoły i historię sportu.</p>
-</main>
-<script src="js/main.js"></script>
+  <nav>
+    <div>
+      <a href="index.html">Start</a>
+      <a href="kierowcy.html">Kierowcy</a>
+      <a href="zespoly.html">Zespoły</a>
+      <a href="tory.html">Tory</a>
+      <a href="historia.html">Historia</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>🏁 F1 Hub</h1>
+      <p>Portal poświęcony Formule 1. Sprawdź kierowców, zespoły i historię największego sportu motorowego na świecie.</p>
+    </section>
+
+    <section>
+      <h2>⏰ Następny wyścig</h2>
+      <p id="countdown">Ładowanie...</p>
+    </section>
+
+    <section>
+      <h2>🏎️ Sprawdź nasze sekcje</h2>
+      <div class="container-grid">
+        <div class="card">
+          <div class="card-image">
+            <div class="image-placeholder">📍</div>
+          </div>
+          <div class="card-content">
+            <h3>Tory wyścigowe</h3>
+            <p>Poznaj najbardziej legendarne tory świata F1 - od Monaco po Monza. Każdy tor ma swoją historię i wyjątkowy charakter.</p>
+            <a href="tory.html" class="card-tag">Przejdź →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <div class="image-placeholder">👨‍🏫</div>
+          </div>
+          <div class="card-content">
+            <h3>Kierowcy</h3>
+            <p>Profiles najlepszych kierowców F1. Dowiedz się więcej o ich karierach, osiągnięciach i osobistych historiach.</p>
+            <a href="kierowcy.html" class="card-tag">Przejdź →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <div class="image-placeholder">🏢</div>
+          </div>
+          <div class="card-content">
+            <h3>Zespoły</h3>
+            <p>Poznaj zespoły startujące w F1. Każdy zespół ma swoją strategię, historię i dążenia do zwycięstwa.</p>
+            <a href="zespoly.html" class="card-tag">Przejdź →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📚 Historia F1</h2>
+      <p>Formuła 1 ma bogatą historię sięgającą lat 50-tych. Dowiedz się, jak sport ewoluował na przestrzeni dziesięcioleci.</p>
+      <a href="historia.html" class="card-tag" style="display: inline-block; margin-top: 15px;">Czytaj więcej →</a>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/countdown.js"></script>
 </body>
 </html>
-<section><h2>Następny wyścig</h2><p id="countdown"></p></section>
-<script src="js/countdown.js"></script>
