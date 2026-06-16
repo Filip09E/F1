@@ -1,25 +1,140 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a href="index.html">Start</a>
-<a href="kierowcy.html">Kierowcy</a>
-<a href="zespoly.html">Zespoły</a>
-<a href="tory.html">Tory</a>
-<a href="historia.html">Historia</a>
-<a href="kontakt.html">Kontakt</a>
-<button id="themeBtn">🌙</button>
-</nav>
-<main>
-<h1>Kontakt</h1>
-<p>Formularz kontaktowy projektu.</p>
-</main>
-<script src="js/main.js"></script>
+  <nav>
+    <div>
+      <a href="index.html">Start</a>
+      <a href="kierowcy.html">Kierowcy</a>
+      <a href="zespoly.html">Zespoły</a>
+      <a href="tory.html">Tory</a>
+      <a href="historia.html">Historia</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>📧 Skontaktuj Się Z Nami</h1>
+      <p>Masz pytania lub chcesz się podzielić swoją pasją do F1? Napisz do nas!</p>
+    </section>
+
+    <section>
+      <h2>Formularz Kontaktowy</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Imię i Nazwisko:</label>
+          <input type="text" id="name" name="name" placeholder="Twoje imię" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="twoj@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Temat:</label>
+          <input type="text" id="subject" name="subject" placeholder="Temat wiadomości" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Wiadomość:</label>
+          <textarea id="message" name="message" rows="6" placeholder="Twoja wiadomość..." required></textarea>
+        </div>
+
+        <button type="submit">Wyślij Wiadomość 🚀</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Informacje Kontaktowe</h2>
+      <div class="container-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/1.jpg" alt="Email" onerror="this.style.display='none'">
+            <div class="image-placeholder">📧</div>
+          </div>
+          <div class="card-content">
+            <h3>Email</h3>
+            <p>info@f1hub.pl</p>
+            <span class="card-tag">Odpowiadamy 24h</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/2.jpg" alt="Telefon" onerror="this.style.display='none'">
+            <div class="image-placeholder">📱</div>
+          </div>
+          <div class="card-content">
+            <h3>Telefon</h3>
+            <p>+48 123 456 789</p>
+            <span class="card-tag">Pon-Pt: 9:00-17:00</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/3.jpg" alt="Lokalizacja" onerror="this.style.display='none'">
+            <div class="image-placeholder">📍</div>
+          </div>
+          <div class="card-content">
+            <h3>Adres</h3>
+            <p>ul. Formuły 1, 00-001 Warszawa</p>
+            <span class="card-tag">Centrum F1 Hub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Śledź Nas W Mediach Społecznych</h2>
+      <div class="container-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/4.jpg" alt="Facebook" onerror="this.style.display='none'">
+            <div class="image-placeholder">👍</div>
+          </div>
+          <div class="card-content">
+            <h3>Facebook</h3>
+            <p>Dołącz do naszej społeczności F1 fanów na Facebooku</p>
+            <a href="#" class="card-tag">Obserwuj →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/5.jpg" alt="Instagram" onerror="this.style.display='none'">
+            <div class="image-placeholder">📸</div>
+          </div>
+          <div class="card-content">
+            <h3>Instagram</h3>
+            <p>Najnowsze zdjęcia i aktualizacje ze świata F1</p>
+            <a href="#" class="card-tag">Obserwuj →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kontakt/6.jpg" alt="Twitter" onerror="this.style.display='none'">
+            <div class="image-placeholder">🐦</div>
+          </div>
+          <div class="card-content">
+            <h3>Twitter</h3>
+            <p>Bieżące komentarze i live updates z wyścigów</p>
+            <a href="#" class="card-tag">Obserwuj →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
