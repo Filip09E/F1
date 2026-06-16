@@ -1,8 +1,642 @@
+/* ============================================
+   ZMIENNE I KOLORY
+   ============================================ */
+:root {
+  --primary: #dc0000;
+  --dark: #111111;
+  --light: #f4f4f4;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --accent: #ffb800;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 8px 25px rgba(220, 0, 0, 0.3);
+}
 
-body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4}
-nav{background:#111;padding:15px}
-nav a,nav button{color:white;margin-right:15px;text-decoration:none}
-main{padding:20px}
-.dark{background:#222;color:#fff}
-table{border-collapse:collapse;width:100%}
-td,th{border:1px solid #ccc;padding:8px}
+/* ============================================
+   RESET I PODSTAWOWE STYLE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--dark);
+  color: var(--text-light);
+}
+
+/* ============================================
+   NAWIGACJA
+   ============================================ */
+nav {
+  background: linear-gradient(135deg, var(--dark) 0%, #1a1a1a 100%);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav button {
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: var(--accent);
+  transform: rotate(20deg);
+}
+
+/* ============================================
+   RESPONSIVE NAV
+   ============================================ */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+  }
+}
+
+/* ============================================
+   GŁÓWNY LAYOUT
+   ============================================ */
+main {
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInDown 0.6s ease-out;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 30px 0 20px 0;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 10px;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin: 15px 0;
+}
+
+body.dark h3 {
+  color: var(--accent);
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+body.dark p {
+  color: #ccc;
+}
+
+/* ============================================
+   ANIMACJE
+   ============================================ */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(220, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(220, 0, 0, 0.6);
+  }
+}
+
+/* ============================================
+   SEKCJE KART (TORY, KIEROWCY, ZESPOŁY)
+   ============================================ */
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 0.6s ease-out;
+}
+
+body.dark .card {
+  background: #1a1a1a;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* ============================================
+   OBRAZKI W KARTACH
+   ============================================ */
+.card-image {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #dc0000 0%, #ff6b6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.card-image-placeholder {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ============================================
+   ZAWARTOŚĆ KARTY
+   ============================================ */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  color: var(--primary);
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  margin: 10px 0;
+}
+
+.card-tag {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--dark);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.card-tag:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   TABELE
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, var(--dark) 0%, #1a1a1a 100%);
+  color: var(--text-light);
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+}
+
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+body.dark td {
+  border-color: #333;
+}
+
+tr:hover {
+  background-color: rgba(220, 0, 0, 0.1);
+}
+
+body.dark tr:hover {
+  background-color: rgba(220, 0, 0, 0.2);
+}
+
+/* ============================================
+   FORMULARZ KONTAKTOWY
+   ============================================ */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+body.dark .contact-form {
+  background: #1a1a1a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+body.dark label {
+  color: var(--text-light);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #222;
+  color: var(--text-light);
+  border-color: #444;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(220, 0, 0, 0.3);
+}
+
+button {
+  background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(220, 0, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   LICZNIK ODLICZAJĄCY
+   ============================================ */
+#countdown {
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   SEKCJA HEROŚSKA
+   ============================================ */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   GALERIA OBRAZKÓW
+   ============================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 250px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   PLACEHOLDER DLA OBRAZKÓW
+   ============================================ */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #dc0000 0%, #ff6b6b 100%);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* ============================================
+   RESPONSYWNOŚĆ
+   ============================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  .container-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    margin: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   TRYB CIEMNY - DODATKOWE STYLE
+   ============================================ */
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+/* ============================================
+   TOOLTIP / ETYKIETA NA HOVER
+   ============================================ */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
