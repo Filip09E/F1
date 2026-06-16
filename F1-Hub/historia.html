@@ -1,25 +1,160 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historia</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia F1</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a href="index.html">Start</a>
-<a href="kierowcy.html">Kierowcy</a>
-<a href="zespoly.html">Zespoły</a>
-<a href="tory.html">Tory</a>
-<a href="historia.html">Historia</a>
-<a href="kontakt.html">Kontakt</a>
-<button id="themeBtn">🌙</button>
-</nav>
-<main>
-<h1>Historia F1</h1>
-<p>Najważniejsze wydarzenia w historii Formuły 1.</p>
-</main>
-<script src="js/main.js"></script>
+  <nav>
+    <div>
+      <a href="index.html">Start</a>
+      <a href="kierowcy.html">Kierowcy</a>
+      <a href="zespoly.html">Zespoły</a>
+      <a href="tory.html">Tory</a>
+      <a href="historia.html">Historia</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>📚 Historia Formuły 1</h1>
+      <p>Podróż przez siedem dekad najszybszego sportu motorowego na świecie</p>
+    </section>
+
+    <section>
+      <h2>Ehipoki F1</h2>
+      <div class="container-grid">
+        <!-- EPOKA 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/1.jpg" alt="Epoka 1950s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h1">1️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 1950 - Początek Ery</h3>
+            <p>Pierwszy wyścig Formuły 1 na torze Silverstone. Juan Manuel Fangio zdominował wczesne lata, zdobywając 5 mistrzostw.</p>
+            <span class="card-tag">Legenda: Fangio</span>
+          </div>
+        </div>
+
+        <!-- EPOKA 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/2.jpg" alt="Epoka 1960s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h2">2️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 1960 - Era Innowacji</h3>
+            <p>Pojawienie się silników V8 i V12. Jackie Stewart i Graham Hill tworzą legendy. Konkurencja staje się bardziej zacięta.</p>
+            <span class="card-tag">Legenda: Stewart</span>
+          </div>
+        </div>
+
+        <!-- EPOKA 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/3.jpg" alt="Epoka 1970s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h3">3️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 1970 - Złota Era</h3>
+            <p>Niki Lauda vs. James Hunt. Dramatyczne pojedynki i ikoniczne samochody. Bezpieczeństwo staje się priorytetem.</p>
+            <span class="card-tag">Legenda: Lauda</span>
+          </div>
+        </div>
+
+        <!-- EPOKA 4 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/4.jpg" alt="Epoka 1980s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h4">4️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 1980 - Era Turbosów</h3>
+            <p>Mikhaił Schumacher wkracza na scenę. Turbiny dają niesamowitą moc. Zawody stają się coraz bardziej nowoczesne.</p>
+            <span class="card-tag">Legenda: Senna</span>
+          </div>
+        </div>
+
+        <!-- EPOKA 5 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/5.jpg" alt="Epoka 1990s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h5">5️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 1990 - Era Schumachera</h3>
+            <p>Michael Schumacher dominuje dekadę. Ferrari odbudowuje swoją potęgę. Technologia osiąga nowe wyżyny.</p>
+            <span class="card-tag">Legenda: Schumacher</span>
+          </div>
+        </div>
+
+        <!-- EPOKA 6 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="images/historia/6.jpg" alt="Epoka 2000s" onerror="this.style.display='none'">
+            <div class="image-placeholder" id="placeholder-h6">6️⃣</div>
+          </div>
+          <div class="card-content">
+            <h3>Lata 2000 - Era Nowoczesna</h3>
+            <p>Hamilton i Vettel tworzą nowe rekordy. Hybrydy zmienia grę. F1 staje się globalnym fenomenem medialnym.</p>
+            <span class="card-tag">Legenda: Hamilton</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ważne Daty w Historii F1</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rok</th>
+            <th>Wydarzenie</th>
+            <th>Znaczenie</th>
+            <th>Mistrz Sezonu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1950</td>
+            <td>Pierwszy wyścig F1</td>
+            <td>Narodziny Formuły 1</td>
+            <td>Fangio</td>
+          </tr>
+          <tr>
+            <td>1976</td>
+            <td>Lauda vs. Hunt</td>
+            <td>Dramatyczne pojedynki</td>
+            <td>Hunt</td>
+          </tr>
+          <tr>
+            <td>1994</td>
+            <td>Śmierć Sendy</td>
+            <td>Wstrząsająca tragedia</td>
+            <td>Schumacher</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>Era Hybryd</td>
+            <td>Rewolucja technologiczna</td>
+            <td>Hamilton</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>Era Regulacji</td>
+            <td>Nowe przepisy aerodynamiki</td>
+            <td>Verstappen</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
